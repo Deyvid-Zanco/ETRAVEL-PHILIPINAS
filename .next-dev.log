@@ -1,0 +1,18 @@
+
+> eta-canada@0.1.0 dev
+> next dev --turbopack --hostname 127.0.0.1 --port 3000
+
+   ▲ Next.js 15.3.8 (Turbopack)
+   - Local:        http://127.0.0.1:3000
+   - Network:      http://127.0.0.1:3000
+
+ ✓ Starting...
+Creating turbopack project {
+  dir: 'C:\\Users\\rcalmeida\\Downloads\\teste-etravel-main\\teste-etravel-main',
+  testMode: true
+}
+ ✓ Ready in 960ms
+ ○ Compiling /philippines/apply ...
+ ✓ Compiled /philippines/apply in 1498ms
+ GET /philippines/apply 200 in 1835ms
+ GET /philippines/apply 200 in 475ms

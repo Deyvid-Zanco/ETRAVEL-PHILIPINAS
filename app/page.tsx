@@ -39,7 +39,7 @@ export default function LandingPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                   <Link
-                    href="#services"
+                    href="/philippines/apply"
                     className="bg-white text-blue-600 hover:bg-gray-100 py-3 px-8 rounded-md text-lg font-semibold transition-colors"
                   >
                     ask it online
@@ -66,7 +66,7 @@ export default function LandingPage() {
                 <h3 className="text-2xl font-bold mb-4">eTA applications</h3>
                 <p className="text-lg mb-6">quick and easy</p>
                 <Link
-                  href="#countries"
+                  href="/philippines/apply"
                   className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-md font-semibold inline-block transition-colors"
                 >
                   ask it online
@@ -184,7 +184,7 @@ export default function LandingPage() {
               <span className="bg-white px-4 py-2 rounded-full shadow">🇯🇵 Japan</span>
             </div>
             <Link
-              href="#services"
+              href="/philippines/apply"
               className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-md text-lg font-semibold inline-block transition-colors"
             >
               Apply for eTA Online
