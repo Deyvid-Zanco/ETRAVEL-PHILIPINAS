@@ -1,6 +1,9 @@
 
 /node_modules
 .env.local
+/.dev.vars
 /.next
+/.open-next
+/.wrangler
 BACKUPENV.TXT
 BACKUPENV.TXT
