@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Disable dark mode - forms should always use light theme for best readability */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+}
+
+body {
+  background: #ffffff;
+  color: #1f2937;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom Landing Page Styles */
+/* Philippines Hero Section - Working CSS setup */
+.m-philippines-hero {
+  @apply bg-cover bg-center text-white flex flex-col justify-center items-center relative;
+  background-image: url('/hero_phillipines.jpeg');
+  min-height: 100vh;
+}
+
+.m-philippines-hero::before {
+  content: "";
+  @apply absolute inset-0 bg-black/50;
+  z-index: 0;
+}
+
+.m-philippines-hero > * {
+  @apply relative z-10;
+}
+
+/* Landing Page Hero Section - Working CSS setup */
+.m-landing-hero {
+  @apply bg-center text-white flex flex-col justify-center items-center relative;
+  background-image: url('/hero%20landing.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+}
+
+.m-landing-hero::before {
+  content: "";
+  @apply absolute inset-0 bg-black/40;
+  z-index: 0;
+}
+
+.m-landing-hero > * {
+  @apply relative z-10;
+}
+
+/* Canada Hero Section */
+.m-jumbotron-image6 {
+  @apply bg-cover bg-center text-white flex flex-col justify-center items-center relative;
+  background-image: url('/hero.png');
+  min-height: 60vh;
+}
+
+.m-jumbotron-image6::before {
+  content: "";
+  @apply absolute inset-0 bg-black/60;
+  z-index: 0;
+}
+
+.m-jumbotron-image6 > * {
+  @apply relative z-10;
+}
+
+.m-steps .step-number {
+  @apply bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-4 font-bold;
+}
+
+.m-table-duotone {
+  @apply w-full border-collapse;
+}
+.m-table-duotone th,
+.m-table-duotone td {
+  @apply border border-gray-300 p-3;
+}
+
+.date-segment-input {
+  @apply w-16 border rounded p-2 text-center;
+}
+
+input[type="text"], input[type="email"], input[type="date"], select, textarea {
+  @apply w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-red-600 transition text-gray-900 bg-white;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  @apply accent-red-600;
+}
+
+label {
+  @apply text-sm font-medium text-gray-700;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1em;
+}
+
+select option {
+  color: #111827; /* text-gray-900 */
+  background-color: white;
+}
+
+/* Ensure form container and text are always readable - override dark mode */
+form,
+form h2,
+form h3 {
+  color: #1f2937; /* text-gray-800 */
+}
+
+/* Ensure form background is white */
+.bg-white {
+  background-color: white;
+  color: #1f2937;
+}
+
+.debug * {
+  outline: 1px solid red !important;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px theme('colors.red.600');
+}
+
+/* The single container for your form in your React component
+  (the one with class "max-w-4xl") can have position: relative if needed for
+  other custom elements, but it is not necessary for native select dropdowns.
+  It's best to start with no positioning rules and add them only if required.
+*/
+
+/* Ensure images are visible and not hidden by any global rules */
+img {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Ensure the hero image container and image are properly displayed */
+.absolute img,
+.relative img {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Ensure Tailwind object-cover class works properly */
+.object-cover {
+  object-fit: cover !important;
+}
+
+/* Ensure full width and height classes work */
+.w-full {
+  width: 100% !important;
+}
+
+.h-full {
+  height: 100% !important;
+}
+
+/* Debug: Add a red border to images to see if they're rendering */
+/*
+img {
+  border: 2px solid red !important;
+  box-sizing: border-box !important;
+}
+*/
